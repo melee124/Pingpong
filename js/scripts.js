@@ -6,18 +6,17 @@ $(document).ready(function() {
     event.preventDefault();
     debugger;
     var number = parseInt($("input#number").val());
-    if (number % 3 === 0) {
-      $("#ping").show()
-    }
-    else if (number % 5 === 0) {
-      $("#pong").show()
-    }
-    else if (number % 5 === 0 && number % 3 === 0) {
-      $("#pingpong").show()
-    }
-    else {
-      $("#none").show()
-    }
+    var multiples = [];
 
+      for (var i = 0; i <= number; i += 1) {
+        if (number % i === 0) {
+          multiples.push(i);
+        };
+
+    $('#result').text(multiples);
+
+
+
+  };
  });
 });
