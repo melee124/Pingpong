@@ -1,7 +1,23 @@
 .body {
-  background-color: #25892a
+  background-color: #25892a;
 }
 
-.result {
-  background-color: #44c94b
+.side {
+  position:absolute;
+  left:0; top:92px; bottom: 0;
+  width: 178px;
+  background-color: #a2ada3;
 }
+
+.container {
+  position: absolute;
+  right:0; top:92px; bottom:0; left: 178px;
+  background-color: #25892a;
+}
+
+.top {
+    position:absolute;
+    left:0; right:0;
+    height: 92px;
+    background-color: #527756;
+  }
