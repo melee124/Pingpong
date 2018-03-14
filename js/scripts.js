@@ -1,36 +1,32 @@
-function countUp(usernumber) {
-for (var i = 1; i <= userInput; i += 1) {
+//Business logic
+function countUp(userNumber) {
+  var firstArray = [];
+for (var i = 0; i <= userNumber; i += 1) {
   if (i % 15 === 0) {
-    firstarray.push("Pingpong");
+    firstArray.push("Pingpong");
 } else if (i % 3 === 0) {
-    firstarray.push("Ping");
+    firstArray.push("Ping");
 } else if (i % 5 === 0) {
-  firstarray.push("Pong");
+    firstArray.push("Pong");
 } else {
-  firstarray.push(i);
+    firstArray.push(i);
 };
 };
-
-return firstarray;
+  return firstArray;
 };
-
-//User interface logic
 
 $(document).ready(function() {
   $("form#counting").submit(function(event) {
     event.preventDefault();
     debugger;
-    var usernumber = parseInt($("input#userInput").val());
-    var result = countUp(usernumber);
-    var secondarray = array.from(firstarray);
-    var ul = $("#output ul");
+    var userNumber = parseInt($("input#yournum").val());
+    var secondArray = countUp(userNumber);
+    //var multiplelist = multiples.slice();
 
 
 
-
-
-    for (var i = 0; i < firstarray; i++) {
-      $("output-ul").append("<li>" + result[index] + "</li>")
-    }
+  for (var i=0; i<secondArray.length; i++) {
+    $("#output ul").text("<li>" + secondArray + "</li>");
+  }
   });
  });
