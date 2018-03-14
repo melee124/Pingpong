@@ -1,5 +1,5 @@
-function.countup("#usernumber") {
-for (var i = 0; i <= number; i += 1) {
+function countUp(usernumber) {
+for (var i = 1; i <= userInput; i += 1) {
   if (i % 15 === 0) {
     firstarray.push("Pingpong");
 } else if (i % 3 === 0) {
@@ -12,11 +12,12 @@ for (var i = 0; i <= number; i += 1) {
 };
 
 return firstarray;
+};
 
 //User interface logic
 
 $(document).ready(function() {
-  $("form#countup").submit(function(event) {
+  $("form#counting").submit(function(event) {
     event.preventDefault();
     debugger;
     var usernumber = parseInt($("input#userInput").val());
@@ -28,8 +29,7 @@ $(document).ready(function() {
 
 
 
-    for (var i = 0; i < firstarray; i++)
-    {
+    for (var i = 0; i < firstarray; i++) {
       $("output-ul").append("<li>" + result[index] + "</li>")
     }
   });
