@@ -11,23 +11,26 @@ for (var i = 0; i <= number; i += 1) {
 };
 };
 
-//Business logic
+return firstarray;
+
+//User interface logic
 
 $(document).ready(function() {
   $("form#countup").submit(function(event) {
     event.preventDefault();
     debugger;
-    var usernumber = parseInt($("input#usernumber").val());
-    var firstarray = [];
+    var usernumber = parseInt($("input#userInput").val());
+    var result = countUp(usernumber);
     var secondarray = array.from(firstarray);
-      if (firstarray.isArray())
+    var ul = $("#output ul");
 
 
 
 
 
-
-
-    $('#result').text(secondarray);
+    for (var i = 0; i < firstarray; i++)
+    {
+      $("output-ul").append("<li>" + result[index] + "</li>")
+    }
   });
  });
