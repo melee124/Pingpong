@@ -1,7 +1,7 @@
 //Business logic
+var firstArray = [];
 function countUp(userNumber) {
-  var firstArray = [];
-for (var i = 0; i <= userNumber; i += 1) {
+for (var i = 1; i <= userNumber; i += 1) {
   if (i % 15 === 0) {
     firstArray.push("Pingpong");
 } else if (i % 3 === 0) {
@@ -18,7 +18,7 @@ for (var i = 0; i <= userNumber; i += 1) {
 $(document).ready(function() {
   $("form#counting").submit(function(event) {
     event.preventDefault();
-    debugger;
+    //debugger;
     var userNumber = parseInt($("input#yournum").val());
     var secondArray = countUp(userNumber);
     //var multiplelist = multiples.slice();
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
 
   for (var i=0; i<secondArray.length; i++) {
-    $("#output ul").text("<li>" + secondArray + "</li>");
+    $("#output-ul").append("<li>" + secondArray[i] + "</li>");
   }
   });
  });
